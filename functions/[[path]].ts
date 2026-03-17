@@ -5,7 +5,7 @@ export const onRequest: PagesFunction = async (context) => {
   const email = (who?.email || "").toLowerCase();
 
   const allowed = "soporte.activatepro@gmail.com";
-  if (email !== allowed) {
+  if (email !== allowed) { 
     return new Response("Unauthorized", { status: 401 });
   }
 
